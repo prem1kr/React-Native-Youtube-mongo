@@ -56,8 +56,7 @@ MY-FULLSTACK-PROJECT/
 
 ### 1. Clone Repos
 ```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+git clone https://github.com/prem1kr/React-Native-Youtube-mongo.git
 ````
 
 ### 2. Backend Setup
