@@ -19,7 +19,7 @@
       "edgeToEdgeEnabled": true
     },
     "web": {
-      "bundler": "metro",
+        "bundler": "webpack",
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
@@ -37,6 +37,12 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "ef6d06ea-fcff-4f59-9e63-5607f8900e31"
+      }
     }
   }
 }
