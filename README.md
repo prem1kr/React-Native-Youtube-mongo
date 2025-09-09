@@ -124,9 +124,3 @@ Example response:
   }
 ]
 ```
-
-
----
-
-👉 Do you want me to also include the **exact MongoDB seed script example** in the README (with 10 video IDs), so reviewers can run it directly?
-```
