@@ -1,6 +1,14 @@
 import VideoCard from "@/components/VideoCard";
 import { useFetchVideos } from "@/hooks/useFetchVideo";
-import { FlatList, SafeAreaView, StyleSheet, Text, Platform, View, Dimensions } from "react-native";
+import {
+  FlatList,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  Platform,
+  View,
+  Dimensions,
+} from "react-native";
 
 export default function HomeScreen() {
   const { videos, loading } = useFetchVideos();
@@ -17,14 +25,14 @@ export default function HomeScreen() {
     return (
       <View style={styles.webContainer}>
         <FlatList
-          data={videos.videos}
+          data={videos}
           keyExtractor={(item) => item.videoId}
           renderItem={({ item }) => (
             <View style={styles.gridItem}>
               <VideoCard video={item} />
             </View>
           )}
-          numColumns={3} 
+          numColumns={3}
           columnWrapperStyle={styles.columnWrapper}
           contentContainerStyle={styles.webContent}
         />
@@ -35,7 +43,7 @@ export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <FlatList
-        data={videos.videos}
+        data={videos}
         keyExtractor={(item) => item.videoId}
         renderItem={({ item }) => <VideoCard video={item} />}
         contentContainerStyle={{ padding: 10 }}
@@ -68,11 +76,11 @@ const styles = StyleSheet.create({
   },
   columnWrapper: {
     justifyContent: "space-between",
-    marginBottom: 20, 
+    marginBottom: 20,
   },
   gridItem: {
     flex: 1,
-    marginHorizontal: 10, 
-    maxWidth: "35%",     
+    marginHorizontal: 10,
+    maxWidth: "35%",
   },
 });
