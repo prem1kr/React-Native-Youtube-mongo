@@ -2,7 +2,7 @@ import { fetchVideos } from "@/services/api";
 import { useState, useEffect } from "react";
 
 export function useFetchVideos() {
-  const [videos, setVideos] = useState({ videos: [] }); // match backend
+  const [videos, setVideos] = useState({ videos: [] }); 
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

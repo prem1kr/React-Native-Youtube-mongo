@@ -17,7 +17,6 @@ router.get("/", async (req, res) => {
 
     const enriched = await fetchYouTubeMetadata(videoIds, apiKey);
 
-    // Maintain DB order
     const enrichedMap = new Map(enriched.map(e => [e.videoId, e]));
     const final = videoIds.map(id => enrichedMap.get(id) || { videoId: id });
 

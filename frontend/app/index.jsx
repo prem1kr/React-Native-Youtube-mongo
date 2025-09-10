@@ -13,7 +13,6 @@ export default function HomeScreen() {
     );
   }
 
-  // ✅ Web: Grid view with full height
   if (Platform.OS === "web") {
     return (
       <View style={styles.webContainer}>
@@ -25,7 +24,7 @@ export default function HomeScreen() {
               <VideoCard video={item} />
             </View>
           )}
-          numColumns={3} // 3 equal columns
+          numColumns={3} 
           columnWrapperStyle={styles.columnWrapper}
           contentContainerStyle={styles.webContent}
         />
@@ -33,7 +32,6 @@ export default function HomeScreen() {
     );
   }
 
-  // ✅ Mobile: Vertical list
   return (
     <SafeAreaView style={styles.container}>
       <FlatList
